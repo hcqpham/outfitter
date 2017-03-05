@@ -1,0 +1,270 @@
+body {margin:0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.3em;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color:            black;
+  } 
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color:            black;
+  } 
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+  font-weight:      bold;
+  color:            black;
+  } 
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  none;
+  font-weight:      bold;
+  background-color: black;
+  color: black;
+  } 
+
+
+.wrap{
+  padding: 8em;
+}
+
+.one
+{
+    max-width:100%;
+    height:30%;
+    text-align:center;
+    background-color: #6f8fd1;
+    padding: 10%;
+}
+
+.two
+{
+    max-width:100%;
+    height:30%;
+    text-align:center;
+    background-color: #6f8fd1;
+    padding: 10%;
+
+}
+
+
+#wardrobe{
+    width: 50%;
+    float: left;
+}
+
+#laundry{
+    width: 50%;
+    float: left;
+
+}
+
+#pickoutfit{
+    float: left;
+    width: 50%;
+}
+
+#outfit{
+    float: left;
+    width: 50%;
+}
+
+
+.container{
+    padding:20px;
+}
+
+.headermenu {
+    width:100%;
+    height:20%;
+    float:left;
+}
+
+.headerleft{
+    width:50%;
+    float:left;
+}
+
+.headerright{
+    width:50%;
+    float:left;
+    text-align:right;
+}
+
+.headerimg{
+    width:10%;
+    height:auto;
+}
+
+
+.clothes
+{
+    float:left;
+    width:50%;
+    text-align:center;
+}
+
+/* you need to change these css stylesheets because there is a clear overlap in communication and you cannot keep doing this to yourself */
+
+.outfit
+{
+    float:left;
+    text-align:center;
+    width:50%;
+}
+
+/*
+please change this, this title is so long and dumb
+*/
+.outfitinoutfithtml
+
+#button{
+    width:30%;
+    background-color: #b82009;
+    border:none;
+    text-align:center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 1em;
+    color: #ffffff;
+    height:2em;
+}
+
+
+div.img {
+    border: 1px solid #ccc;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-position: center center;
+    background-size: cover;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.responsive {
+    float: left;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer{
+    text-align:center;
+}
+
+.footer img{
+    padding: 0.8em;
+    }
+
+.btn{
+    height: 2em;
+    font-size: 2em;
+}
+
+.calendar
+{
+  width:80%;
+  margin: 0 auto;
+  font-size:2em;
+  margin-top:2em;
+}
+
+th{
+  width:20%;
+}
+
+.upload{
+  margin-bottom:1em;
+}
+
+.weather{
+  margin-top:10em;
+}
+
+
+.reminder{
+  font-size:1.5em;
+  margin-top:2em;
+  margin-bottom:2em;
+}
