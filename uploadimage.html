@@ -1,61 +1,75 @@
-<head>
-	<link rel="stylesheet" type"text/css" href="css/stylesheet.css">
-	<link rel="stylesheet" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
+<!DOCTYPE HTML>
 
-<body>
+<html>
+	<head>
+		<title>Outfitter - Upload</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<!-- Header Bar - responsive and shows hamburger menu when resized to a smaller size -->
-<!-- changing this because i don't like how the menu confuses the flow -
-<ul class="topnav" id="myTopnav">
-  <li><a class="active" href="home.html">Home</a></li>
-  <li><a href="wardrobe.html">Wardrobe</a></li>
-  <li><a href="pickoutfit.html">Pick Outfit</a></li>
-  <li><a href="outfit.html">Outfits</a></li>
-  <li><a href="index.html">Log Out</a></li>
-  <li class="icon">
-    <a href="javascript: void(0);" style="font-size:15px;" onclick="menuBar()">☰</a>
-  </li>
-</ul>
--->
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"></span><span class="title">Uploader</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+							<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="uploadimage.html">Add Clothes</a></li>
+							<li><a href="pickoutfit.html">Plan Outfits</a></li>
+							<li><a href="wardrobe.html">Wardrobe</a></li>
+							<li><a href="outfit.html">Outfits</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<div id="uploadimg">
+							<center>
+							<h2>Upload your photos of your clothes to your wardrobe here!</h2> <br>
+							<p>Please note that files over 5MB will not be accepted and will cause an error with the app. If you see a blank screen, please use your back key and try submitting the photo again.</p> <br><br>
+
+							<!-- look into camera API? -->
+
+							<form enctype="multipart/form-data" method="post" action="php/upload.php">
+					  		<input type="file" size="32" name="image_field" value="">
+					  		<input type="submit" name="Submit" value="Upload">
+							</form>
+							</center>
+						</div>
+
+						</div>
+					</div>
 
 
-<!-- main -->
-<div class ="container">
-	<!-- temporary menu bar -->
-	<a href="uploadimage.html"> Upload Clothes to Wardrobe </a><br>
-	<a href="pickoutfit.html"> Plan Outfits </a><br>
-	<a href="wardrobe.html"> View Closet </a><br>
-	<a href="outfit.html"> View Outfit </a><br>
+			</div>
 
-	<div id="uploadimg">
-		<center>
-		<h2>Upload your photos of your clothes to your wardrobe here!</h2> <br>
-		<p>Please note that files over 5MB will not be accepted and will cause an error with the app. If you see a blank screen, please use your back key and try submitting the photo again.</p> <br><br>
-
-		<!-- look into camera API? -->
-
-		<form enctype="multipart/form-data" method="post" action="php/upload.php">
-  		<input type="file" size="32" name="image_field" value="">
-  		<input type="submit" name="Submit" value="Upload">
-		</form>
-		</center>
-	</div>
-
-<br>
-</div>
-
-<!-- footer -->
-<!-- hiding this bc i don't know if it's necessary
-<div class="footer">
-	<a href="wardrobe.html"><img src="img/wardrobe.png"></a>
-	<a href="pickoutfit.html"><img src="img/pickoutfitbutton.png"></a>
-	<a href="laundry.html"><img src="img/laundry.png"></a>
-</div>
--->
-
-
-<!-- javascript -->
-	<script src="js/menubar.js"></script>
-<script src="js/imageupload.js"></script>    
-</body>
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+			<script src="js/imageupload.js"></script>
+	</body>
+</html>

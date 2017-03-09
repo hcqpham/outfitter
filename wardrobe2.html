@@ -1,0 +1,70 @@
+<head>
+	<link rel="stylesheet" type"text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<title>Wardrobe</title>
+
+<body>
+
+<!-- closet menu -->
+
+<!-- Header Bar - responsive and shows hamburger menu when resized to a smaller size -->
+<!-- changing bc i don't like how it confuses flow 
+<ul class="topnav" id="myTopnav">
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="wardrobe.html">Wardrobe</a></li>
+  <li><a href="pickoutfit.html">Pick Outfit</a></li>
+  <li><a href="outfit.html">Outfits</a></li>
+  <li><a href="index.html">Log Out</a></li>
+  <li class="icon">
+    <a href="javascript: void(0);" style="font-size:15px;" onclick="menuBar()">☰</a>
+  </li>
+</ul>
+-->
+
+<!-- image gallery -->
+<div class ="container">
+		<!-- temporary menu bar -->
+	<a href="uploadimage.html"> Upload Clothes to Wardrobe </a><br>
+	<a href="pickoutfit.html"> Plan Outfits </a><br>
+	<a href="wardrobe.html"> View Closet </a><br>
+	<a href="outfit.html"> View Outfit </a><br>
+
+
+	<h1 style="font-size:5em;"> Your Closet </h1>
+	<!-- uploading image div -->
+	<div class="upload">
+		<a href="uploadimage.html"><button type="button" class="btn" style="font-size:2em;">Upload Clothes to Wardrobe</button></a>
+	</div>
+	<div class="pickoutfit">
+			<a href="pickoutfit.html"><button type="button" class="btn" style="font-size:2em;">Plan Outfits</button></a>
+	</div>
+
+<!-- wardrobe -->
+	<div id="dvProdList"></div>
+	<div class="clearfix"></div>
+	
+	<br><br><br><br>
+
+</div>
+
+
+
+	<!-- footer icons -->
+<!-- commenting out for now 
+	<div class="footer">
+		<a href="wardrobe.html"><img src="img/wardrobe.png"></a>
+		<a href="pickoutfit.html"><img src="img/pickoutfitbutton.png"></a>
+		<a href="laundry.html"><img src="img/laundry.png"></a>
+	</div><br>
+-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/menubar.js"></script>
+<script src="js/imageupload.js"></script>
+<script src="js/wardrobelaundry.js"></script>      
+
+
+</body>

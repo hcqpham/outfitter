@@ -1,0 +1,61 @@
+<head>
+	<link rel="stylesheet" type"text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<!-- Header Bar - responsive and shows hamburger menu when resized to a smaller size -->
+<!-- changing this because i don't like how the menu confuses the flow -
+<ul class="topnav" id="myTopnav">
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="wardrobe.html">Wardrobe</a></li>
+  <li><a href="pickoutfit.html">Pick Outfit</a></li>
+  <li><a href="outfit.html">Outfits</a></li>
+  <li><a href="index.html">Log Out</a></li>
+  <li class="icon">
+    <a href="javascript: void(0);" style="font-size:15px;" onclick="menuBar()">☰</a>
+  </li>
+</ul>
+-->
+
+
+<!-- main -->
+<div class ="container">
+	<!-- temporary menu bar -->
+	<a href="uploadimage.html"> Upload Clothes to Wardrobe </a><br>
+	<a href="pickoutfit.html"> Plan Outfits </a><br>
+	<a href="wardrobe.html"> View Closet </a><br>
+	<a href="outfit.html"> View Outfit </a><br>
+
+	<div id="uploadimg">
+		<center>
+		<h2>Upload your photos of your clothes to your wardrobe here!</h2> <br>
+		<p>Please note that files over 5MB will not be accepted and will cause an error with the app. If you see a blank screen, please use your back key and try submitting the photo again.</p> <br><br>
+
+		<!-- look into camera API? -->
+
+		<form enctype="multipart/form-data" method="post" action="php/upload.php">
+  		<input type="file" size="32" name="image_field" value="">
+  		<input type="submit" name="Submit" value="Upload">
+		</form>
+		</center>
+	</div>
+
+<br>
+</div>
+
+<!-- footer -->
+<!-- hiding this bc i don't know if it's necessary
+<div class="footer">
+	<a href="wardrobe.html"><img src="img/wardrobe.png"></a>
+	<a href="pickoutfit.html"><img src="img/pickoutfitbutton.png"></a>
+	<a href="laundry.html"><img src="img/laundry.png"></a>
+</div>
+-->
+
+
+<!-- javascript -->
+	<script src="js/menubar.js"></script>
+<script src="js/imageupload.js"></script>    
+</body>
