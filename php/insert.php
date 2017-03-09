@@ -1,6 +1,6 @@
 <?php
 
-$servername = "clairepham.com";
+$servername = "localhost";
 $username = "root";
 $password = "password";
 $dbname = "clothesDB"; 
@@ -14,11 +14,10 @@ try {
     }
 
 //Creating Variables Q: is this necessary?
-// $imgURL=$_POST['imgURL']; commenting out bc unsure whether or not this is right
+$imgURL=$_POST['imgURL'];
 $clothesType=$_POST['clothesType'];
 
 //Insert Data
-/* Q: if i want imgURL to be added to the same clothesID as clothesType, how would i do that? per our conversation yesterday, you recommended against having one php file that would handle all of this. should i have scandir.php for example render this page right after?  */
 $sql="INSERT INTO clothesWardrobe (clothesType)
 	VALUES('$_POST[fname]')
 ";
