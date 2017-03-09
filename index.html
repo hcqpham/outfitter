@@ -1,26 +1,51 @@
-<!--  linear flow, starting page-->
+<!DOCTYPE HTML>
 
-<head>
-	<link rel="stylesheet" type"text/css" href="css/stylesheet.css">
-	<link rel="stylesheet" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
+<html>
+	<head>
+		<title>Outfitter - Login</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/indexcss.css" />
+		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="img/avatar.jpg" alt="" /></span>
+							<h1>OUTFITTER</h1>
+							<p>Welcome to the premier closet mindfulness application!</p>
+						</header>
 
-<title>Welcome to Outfitter! Log In</title>
+						<footer>
+							<!-- login parts -->
+							<div class="login">
+							Please login below.<br>
+							Username<br>
+							<input></input><br>
+							Password<br>
+							<input type="password"></input>
+							<a href="home.html"><button type="button">Log in</button></a>
+							</div>
+						</footer>
+					</section>
 
-<body>
-	<div class="container">
+				<!-- Footer -->
+					<footer id="footer"></footer>
 
-	<h1> Welcome to Outfitter! </h1>
-		<!-- login parts -->
-		<h2>Please login below.</h2>
-		<br>
-		<h4>Username</h4>
-		<input></input>
-		<br>
-		<h4>Password</h4>
-		<input type="password"></input>
+			</div> <!-- end wrapper div -->
+
+
+		<!-- Scripts -->
+					<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
 		
-		<br>
-	</div>
-	
-</body>
+
+	</body>
+</html>
