@@ -1,45 +1,113 @@
-<!-- second page for flow -->
+<!DOCTYPE HTML>
 
-<head>
-	<link rel="stylesheet" type"text/css" href="css/stylesheet.css">
-	<link rel="stylesheet" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<html>
+	<head>
+		<title>Outfitter - Main Menu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-</head>
-<title>Main Menu</title>
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-<body>
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="img/logo.svg" alt="" /></span><span class="title">Outfitter</span>
+								</a>
 
-<!-- Header Bar - responsive and shows hamburger menu when resized to a smaller size -->
-<!-- commenting out - not sure if necessary for home page
-<ul class="topnav" id="myTopnav">
-  <li><a class="active" href="home_b.html">Home</a></li>
-  <li><a href="wardrobe_b.html">Wardrobe</a></li>
-  <li><a href="pickoutfit_b.html">Pick Outfit</a></li>
-  <li><a href="outfit_b.html">Outfits</a></li>
-  <li><a href="index.html">Log Out</a></li>
-  <li class="icon">
-    <a href="javascript: void(0);" style="font-size:15px;" onclick="menuBar()">☰</a>
-  </li>
-</ul>
--->
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
 
-<!-- main menu options -->
-<div class="wrap">
-	<center><h2 style="font-size: 5em;"> Welcome to Outfitter B! </h2>
-		</center>
+						</div>
+					</header>
 
-	<a href="uploadimage.html"> Upload Clothes to Wardrobe </a><br>
-	<a href="pickoutfit.html"> Plan Outfits </a><br>
-	<a href="wardrobe.html"> View Closet </a><br>
-	<a href="outfit.html"> View Outfit </a><br>
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="uploadimage.html">Add Clothes</a></li>
+							<li><a href="pickoutfit.html">Plan Outfits</a></li>
+							<li><a href="wardrobe.html">Wardrobe</a></li>
+							<li><a href="outfit.html">Outfits</a></li>
+						</ul>
+					</nav>
 
-</div>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								
+								<p>We're here to help. Is this your first time here? If that's the case, why don't you start adding your clothes to your wardrobe? Once you do that, you can start picking out your outfits for the week. Let's make life easier - don't stress out about what to wear the morning before a huge presentation. Stay prepared - and organized! </p> <!-- thoughts: add a hide info / show info button here -->
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="img/image01.jpg" alt="" />
+									</span>
+									<a href="uploadimage.html">
+										<h2>Add Clothes to Wardrobe</h2>
+										<div class="content">
+											<p>A nifty description of what adding clothes does goes here.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="img/pic02.jpg" alt="" />
+									</span>
+									<a href="pickoutfit.html">
+										<h2>Plan Outfit</h2>
+										<div class="content">
+											<p>A nifty description of what adding clothes does goes here.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="img/pic03.jpg" alt="" />
+									</span>
+									<a href="wardrobe.html">
+										<h2>Wardrobe</h2>
+										<div class="content">
+											<p>A nifty description of your wardrobe goes here.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="img/pic04.jpg" alt="" />
+									</span>
+									<a href="outfit.html">
+										<h2>Outfits</h2>
+										<div class="content">
+											<p>A nifty description of your outfits goes here.</p>
+										</div>
+									</a>
+								</article>
+								
+							</section>
+						</div>
+					</div>
 
-	<script src="js/menubar.js"></script>
-	<script src="js/displaydates.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
-    <script src="js/weather.js"></script>
 
-</body>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+
+	</body>
+</html>
