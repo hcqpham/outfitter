@@ -1,0 +1,94 @@
+<head>
+	<link rel="stylesheet" type"text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body> 
+<!-- Header Bar - responsive and shows hamburger menu when resized to a smaller size -->
+<!-- 3/2 this will change
+<ul class="topnav" id="myTopnav">
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="wardrobe.html">Wardrobe</a></li>
+  <li><a href="pickoutfit.html">Pick Outfit</a></li>
+  <li><a href="outfit.html">Outfits</a></li>
+  <li><a href="index.html">Log Out</a></li>
+  <li class="icon">
+    <a href="javascript: void(0);" style="font-size:15px;" onclick="menuBar()">☰</a>
+  </li>
+</ul>
+-->
+
+<!-- outfits -->
+<div class ="container">
+		<!-- temporary menu bar -->
+	<a href="uploadimage.html"> Upload Clothes to Wardrobe </a><br>
+	<a href="pickoutfit.html"> Plan Outfits </a><br>
+	<a href="wardrobe.html"> View Closet </a><br>
+	<a href="outfit.html"> View Outfit </a><br>
+
+<h2>My outfits</h2>
+
+<!-- weather api -->
+<div class="weather">
+	<p>  Weather Checker </p>
+	<form role="search" action="javascript:getWeather()">
+        <div class="form-group"><input id="city" type="text" class="form-control" placeholder="Enter City and then press Enter" required></div>
+        <!--<button type="submit" class="btn btn-default">Get Weather Forecast for next Five Days</button>-->
+        <button type="button" id="showbtn"> Show Forecast </button>
+        <button type="button" id="hidebtn"> Hide Forecast </button>
+    </form>
+
+    <div class="container" hidden>
+    	<div class="jumbotron"></div>
+	    <div id="forecast" class="row"></div>
+	</div>
+</div>
+
+<!-- Outfits -->
+<div class="outfitinoutfithtml">
+	<h2> Date Night </h2>
+	<div class="responsive">
+		<!-- 14, 5, 16, none-->
+		<div class="img">
+			<img src="img/uploaded/image_thumbnail.jpg">
+			<img src="img/uploaded/image_thumbnail_5.jpg">
+		</div>
+	</div>
+</div>
+
+<br><br>
+<div class="outfitinoutfithtml">
+	<h2> Casual Day </h2>
+	<div class="responsive">
+		<div class="img">
+		<img src="img/uploaded/image_thumbnail_3.jpg">
+		<img src="img/uploaded/image_thumbnail_6.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="paoutfit">
+	<!-- button for uploading photos-->
+<div class="upload" style="float:left;;">
+<a href="pickoutfit.html"><button type="button" class="btn">Plan out more outfits?</button></a>
+</div>
+</div>
+
+</div>
+
+<!-- footer icons -->
+<!-- commenting out for now 
+<div class="footer">
+	<a href="wardrobe_b.html"><img src="img/wardrobe.png"></a>
+	<a href="pickoutfit_b.html"><img src="img/pickoutfitbutton.png"></a>
+</div><br>
+-->
+
+<!-- javascript, jquery -->
+<script src="js/menubar.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/imageupload.js"></script>
+<script src="js/wardrobelaundry.js"></script>      
+
+
+</body>

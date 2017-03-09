@@ -1,0 +1,93 @@
+<head>
+	<link rel="stylesheet" type"text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type"text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<title> Pick Outfit </title>
+
+<!-- Header Bar - responsive and shows hamburger menu when resized to a smaller size -->
+<!-- 
+<ul class="topnav" id="myTopnav">
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="wardrobe.html">Wardrobe</a></li>
+  <li><a href="pickoutfit.html">Pick Outfit</a></li>
+  <li><a href="outfit.html">Outfits</a></li>
+  <li><a href="index.html">Log Out</a></li>
+  <li class="icon">
+    <a href="javascript: void(0);" style="font-size:15px;" onclick="menuBar()">☰</a>
+  </li>
+</ul>
+
+<!-- pick outfit content -->
+<div class ="container">
+<!-- div that ends wrap	<div class="wrap"> -->
+
+  <!-- temporary menu bar -->
+  <a href="uploadimage.html"> Upload Clothes to Wardrobe </a><br>
+  <a href="pickoutfit.html"> Plan Outfits </a><br>
+  <a href="wardrobe.html"> View Closet </a><br>
+  <a href="outfit.html"> View Outfit </a><br>
+
+
+<h1 style="font-size:6em;"> Pick Outfit </h1>
+	
+<!-- weather api -->
+<div class="weather">
+	<p style="font-size:2em;">  Weather Checker </p>
+	<form role="search" action="javascript:getWeather()">
+        <div class="form-group"><input id="city" type="text" class="form-control" placeholder="Enter City and then press Enter" required style="font-size:2em;"></div>
+        <!--<button type="submit" class="btn btn-default">Get Weather Forecast for next Five Days</button>-->
+        <button type="button" id="showbtn" style="font-size:2.5em;"> Show Forecast </button>
+        <button type="button" id="hidebtn" style="font-size:2.5em;"> Hide Forecast </button>
+    </form>
+
+    <div class="container" hidden>
+    	<div class="jumbotron"></div>
+	    <div id="forecast" class="row"></div>
+	</div>
+</div>
+
+<!-- this is what renders my images from the json array -->
+<div id="dvProdList"></div>
+<div class="clearfix"></div>
+<br>
+
+<!-- pick outfit dialogue 
+3/2 notes: you might want to look into changing the dialogue, or make a fake "Are you sure?" onclick event-->
+<div class="pickoutfitbtn">
+<center><p id="successbtn">
+<button onclick="successDialogue()" type="button" class="btn" style="font-size: 3em;">Pick Outfit</button></p></center>
+</div>
+<br>
+<!-- button for uploading photos-->
+<div class="upload" style="float:left;;">
+<a href="uploadimage.html"><button type="button" class="btn" style="font-size:2em;">Upload more photos to wardrobe?</button></a>
+</div>
+
+<!-- div that ends wrap</div> -->
+</div>
+
+<!-- footer icons -->
+<!-- commenting this out for now 
+	<div class="footer">
+		<a href="wardrobe_b.html"><img src="img/wardrobe.png"></a>
+		<a href="pickoutfit_b.html"><img src="img/pickoutfitbutton.png"></a>
+	</div><br>
+-->
+
+<!-- javascript/jquery-->
+
+<script src="js/menubar.js"></script> <!-- loads menu bar -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> <!-- loads jquery -->
+<script src="js/jquery.imgcheckbox.js"></script> <!-- loads checkbox on images-->
+<script src="js/imageupload.js"></script>
+<script src="js/weather.js"></script>     
+<script src="js/pickoutfit.js"></script> 
+
+<!-- script for weather. 3/2 for some reason my checkbox won't load at the same time as my weather api if this isn't commented out so i'm going to keep this here and not know what it really does becauase i like that it works -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script> -->
+
+
+</body>
