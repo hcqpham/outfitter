@@ -11,8 +11,6 @@ $password = "clothes";
 $dbname = "clothesDB"; 
 
 // Opens connection to MySQL
-try 
-{
     $conn = new mysqli($servername, $username, $password, $dbname);
     //conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
@@ -56,33 +54,21 @@ try
     }
 
     //executing the query and inserting into mysql db
-    $sql = "INSERT INTO clothesWardrobe(imgURL, clothesType)
-            VALUES('$imgURL', '$clothesType')";
-    // use exec() because no results are returned
-    $conn->exec($sql);
-
+   /*  THIS IS BAD - SQL INJECTION CAN OCCUR HERE AND YOU WILL REGRET IT IF IT HAPPENS. AVOID. Make prepared statements!
+    $sql = "INSERT INTO clothesWardrobe(imgURL, clothesType) VALUES('$imgURL', '$clothesType')"; */
+    $statement = $conn->prepare("INSERT INTO clothesWardrobe(imgURL, clothesType) VALUES(?, ?)");
+    $statement->bind_param("ss", $imgURL, $clothesType);
+    $statement->execute();
+  
     // mysqli connection if pass/fail
-      if ($conn->query($sql) === TRUE) {
+/*      if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    /*PDO added condition if pass/fail
-    $conn -> commit();
-    {
-      echo "echo Success! <br>";
-      echo "Go back to <a href='uploadimage.html'>upload image</a> Or <a href='home.html'>main menu</a>?";
-    }*/
-}
-      //Catch block handles any problems that occur in DB queries
-   // catch(PDOException $e)
-        {
-        // roll back the transaction if something failed
-     //   echo "Error: " . $e->getMessage();
-        }
-  
+*/
+
 //Closes connection
-  //  $conn = null;
   $conn->close();
 
 ?>

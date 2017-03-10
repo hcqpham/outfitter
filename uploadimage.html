@@ -49,16 +49,25 @@
 							<center>
 							<h2>Upload your photos of your clothes to your wardrobe here!</h2> <br>
 							<p>Please note that files over 5MB will not be accepted and will cause an error with the app. If you see a blank screen, please use your back key and try submitting the photo again.</p> <br><br>
+							<form enctype="multipart/form-data" method="post" action="php/upload.php">
+						    	<fieldset>
+						        <legend>What category does your article of clothing fall under?</legend><br>
+						        <select name="clothesType">
+						            <option> Select Option </option> <!-- Q: how do i make this an error if you use this so submit - or run error message -->
+						            <option value="tops"> Tops </option>
+						            <option value="outerwear"> Outerwear </option>
+						            <option value="pants"> Pants </option>
+						            <option value="dresses"> Dresses </option>
+						            <option value="undergarments"> Undergarments </option>
+						            <br><option value="shoes"> Shoes </option>
+						        </select><br><br>
+						     
+						    	</fieldset>
+                		<input type="file" size="32" name="image_field" value="">
+					  				<input type="submit" name="Submit" value="Upload">
+							</form>
 
 							<!-- look into camera API? -->
-							<div class="upload">
-							<form enctype="multipart/form-data" method="post" action="php/upload.php">
-								<br>
-					  		<input type="file" size="32" name="image_field" value="">
-					  		<input type="submit" name="Submit" value="Upload">
-							</form>
-							</upload>
-							</center>
 						</div>
 
 						</div>
