@@ -8,7 +8,8 @@ $dbname = "clothesDB";
 
 // Opens connection to MySQL
   $conn = new mysqli($servername, $username, $password, $dbname);
-	$sql = "select * from clothesWardrobe";
+  //selecting clothesID column, substring imgURL, 4 starting from the fourth character as imgURL column alias in json 
+	$sql = "select ClothesID, substr(imgURL, 4) as imgURL, clothesType from clothesWardrobe;"; 
 	$statement = $conn->prepare($sql); 
 
 header("Content-Type: application/json");

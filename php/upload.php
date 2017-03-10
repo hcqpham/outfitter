@@ -12,27 +12,20 @@ $dbname = "clothesDB";
 
 // Opens connection to MySQL
     $conn = new mysqli($servername, $username, $password, $dbname);
-    //conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //echo "Connected successfully"; 
-    
+
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     } 
   
     // set variables
-    //$dir_dest = (isset($_GET['dir']) ? $_GET['dir'] : 'tmp');
-    //$dir_pics = (isset($_GET['pics']) ? $_GET['pics'] : $dir_dest);
-    //$imgURL="..img/uploaded/img_thumbnail.jpg"; //back to the whole uniq id situation
     $clothesType=$_POST['clothesType'];
 
     //upload image
     $handle = new upload($_FILES['image_field']);
     if ($handle->uploaded) 
     {
-      $filename = uniqid('img_thumbnail'); // img_thumbnail5313950dafa39 
+      $filename = uniqid('img_thumbnail'); // will appear as img_thumbnail5313950dafa39 
       $handle->file_new_name_body   = $filename;
       $handle->image_convert = 'jpg';
       $handle->image_resize         = true;
