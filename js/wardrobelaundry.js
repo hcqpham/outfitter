@@ -2,7 +2,7 @@
 
 $(document).ready(function () 
 {
-	var jsonURL = "php/scandir.php";
+	var jsonURL = "php/clothinginfo.php";
 	$.getJSON(jsonURL, function(json)
 	{
 		$.each(json, function(key, value)

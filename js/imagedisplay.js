@@ -4,7 +4,7 @@
 $(document).ready(function () 
   {
  -  var jsonURL = "js/uploadedimgarray.json";
- +  var jsonURL = "php/scandir.php";
+ +  var jsonURL = "php/clothinginfo.php";
     $.getJSON(jsonURL, function(json)
     {
         $.click(json, function(key, value)
