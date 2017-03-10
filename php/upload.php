@@ -44,7 +44,10 @@ $dbname = "clothesDB";
       {
         echo 'Image being resized and successfully stored in uploaded img folder!';
         echo '<br>go back to <a href="../wardrobe.html">wardrobe</a>?';
-        $imgURL = "../img/uploaded/" + $filename + ".jpg";
+        $imgURL = "../img/uploaded/".$filename.".jpg";
+        $statement = $conn->prepare("INSERT INTO clothesWardrobe(imgURL, clothesType) VALUES(?, ?)");
+        $statement->bind_param("ss", $imgURL, $clothesType);
+        $statement->execute();
         $handle->clean(); 
       }
     }
@@ -56,9 +59,7 @@ $dbname = "clothesDB";
     //executing the query and inserting into mysql db
    /*  THIS IS BAD - SQL INJECTION CAN OCCUR HERE AND YOU WILL REGRET IT IF IT HAPPENS. AVOID. Make prepared statements!
     $sql = "INSERT INTO clothesWardrobe(imgURL, clothesType) VALUES('$imgURL', '$clothesType')"; */
-    $statement = $conn->prepare("INSERT INTO clothesWardrobe(imgURL, clothesType) VALUES(?, ?)");
-    $statement->bind_param("ss", $imgURL, $clothesType);
-    $statement->execute();
+    
   
     // mysqli connection if pass/fail
 /*      if ($conn->query($sql) === TRUE) {
