@@ -51,11 +51,13 @@
 							<p>Please note that files over 5MB will not be accepted and will cause an error with the app. If you see a blank screen, please use your back key and try submitting the photo again.</p> <br><br>
 
 							<!-- look into camera API? -->
-
+							<div class="upload">
 							<form enctype="multipart/form-data" method="post" action="php/upload.php">
+								<br>
 					  		<input type="file" size="32" name="image_field" value="">
 					  		<input type="submit" name="Submit" value="Upload">
 							</form>
+							</upload>
 							</center>
 						</div>
 
@@ -71,5 +73,16 @@
 			<script src="js/util.js"></script>
 			<script src="js/main.js"></script>
 			<script src="js/imageupload.js"></script>
+
+			<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-92526850-2', 'auto');
+ ga('send', 'pageview');
+
+</script>
 	</body>
 </html>

@@ -34,3 +34,13 @@ $("#hidebtn").click(function(){
 $("#showbtn").click(function(){
     $(".jumbotron").show();
 });
+
+
+//i'm also adding the hide and show buttons here because yes, my code is shit and yes, this is an unorganized clusterfuck. i'm sorry.
+$("#hidebtn").click(function(){
+    $(".firsttimer").hide();
+});
+
+$("#showbtn").click(function(){
+    $(".firsttimer").show();
+});

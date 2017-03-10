@@ -6,66 +6,83 @@ include('class.upload.php');
 
 //set up mysql host
 $servername = "localhost";
-$username = "root";
-$password = "password";
+$username = "clothes";
+$password = "clothes";
 $dbname = "clothesDB"; 
 
 // Opens connection to MySQL
-try {
-    $dbh = new PDO ("dblib:dbname=$dbname","$username","$pw");    // 3/9 hopefully this works?
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);// set the PDO error mode to exception
-    echo "Connected successfully"; 
+try 
+{
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    //conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully"; 
     
-
-// set variables
-$dir_dest = (isset($_GET['dir']) ? $_GET['dir'] : 'tmp');
-$dir_pics = (isset($_GET['pics']) ? $_GET['pics'] : $dir_dest);
-$imgURL="..img/uploaded/img_thumbnail.jpg"; //back to the whole uniq id situation
- $clothesType=$_POST['clothesType'];
-
-//upload image
-$handle = new upload($_FILES['image_field']);
-if ($handle->uploaded) {
-  $filename = uniqid(); // *st: this will generate a uniqid and save it to $filename.
-  $handle->file_new_name_body   = 'image_thumbnail';
-  $handle->file_new_name_body_add = uniqid('image_thumbnail'); //?? this can't be right..
-  $handle->image_convert = 'jpg';
-  $handle->image_resize         = true;
-  $handle->image_x              = 300;
-  $handle->image_ratio_y        = true;
-  $handle->process('../img/uploaded');
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
   
-  if ($handle->processed) {
-    echo 'Image being resized and successfully stored in uploaded img folder!';
-    echo '<br>go back to <a href="../wardrobe.html">wardrobe</a>?';
-// *st: somewhere here you'll need to set $imgURL to your image path.
-    $handle->clean(); } 
-  else {
-    echo 'error : ' . $handle->error;
-      }
-  }
+    // set variables
+    //$dir_dest = (isset($_GET['dir']) ? $_GET['dir'] : 'tmp');
+    //$dir_pics = (isset($_GET['pics']) ? $_GET['pics'] : $dir_dest);
+    //$imgURL="..img/uploaded/img_thumbnail.jpg"; //back to the whole uniq id situation
+    $clothesType=$_POST['clothesType'];
 
-//executing the query and inserting into mysql db
-$sql = "INSERT INTO clothesWardrobe(imgURL, clothesType)
-        VALUES('$imgURL', '$clothesType')";
-
-//added condition if pass/fail
-if(mysqli_affected_rows($connect)>0){
-  echo "echo Success! <br>";
-  echo "Go back to <a href="uploadimage.html">upload image</a> Or <a href="home.html">main menu</a>?";
-}
-else{
-  echo "Adding to category NOT added. <br>";
-  echo mysqli_error($connect);
-} // *st: moved the brace down here from line 19 - most of your code was outside the try block, which will lead to syntax errors, since PHP is looking for a catch immedately after the try. cp: ty! 
-//Catch block handles any problems that occur in DB queries
-catch(PDOException $e)
+    //upload image
+    $handle = new upload($_FILES['image_field']);
+    if ($handle->uploaded) 
     {
-    echo "Connection failed: " . $e->getMessage();
+      $filename = uniqid('img_thumbnail'); // img_thumbnail5313950dafa39 
+      $handle->file_new_name_body   = $filename;
+      $handle->image_convert = 'jpg';
+      $handle->image_resize         = true;
+      $handle->image_x              = 300;
+      $handle->image_ratio_y        = true;
+      $handle->process('../img/uploaded');
+  
+      if ($handle->processed) 
+      {
+        echo 'Image being resized and successfully stored in uploaded img folder!';
+        echo '<br>go back to <a href="../wardrobe.html">wardrobe</a>?';
+        $imgURL = "../img/uploaded/" + $filename + ".jpg";
+        $handle->clean(); 
+      }
+    }
+    else 
+    {
+      echo 'error : ' . $handle->error;
     }
 
-//Closes connection
-    $conn = null;
+    //executing the query and inserting into mysql db
+    $sql = "INSERT INTO clothesWardrobe(imgURL, clothesType)
+            VALUES('$imgURL', '$clothesType')";
+    // use exec() because no results are returned
+    $conn->exec($sql);
 
+    // mysqli connection if pass/fail
+      if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    /*PDO added condition if pass/fail
+    $conn -> commit();
+    {
+      echo "echo Success! <br>";
+      echo "Go back to <a href='uploadimage.html'>upload image</a> Or <a href='home.html'>main menu</a>?";
+    }*/
+}
+      //Catch block handles any problems that occur in DB queries
+   // catch(PDOException $e)
+        {
+        // roll back the transaction if something failed
+     //   echo "Error: " . $e->getMessage();
+        }
+  
+//Closes connection
+  //  $conn = null;
+  $conn->close();
 
 ?>
