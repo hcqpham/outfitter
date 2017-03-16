@@ -48,9 +48,11 @@
 							<div id="uploadimg">
 							<center>
 							<h2>Upload your photos of your clothes to your wardrobe here!</h2> <br>
-							<p>Please note that files over 5MB will not be accepted and will cause an error with the app. If you see a blank screen, please use your back key and try submitting the photo again.</p> <br><br>
+							<p>Please note that files over 5MB will not be accepted and will cause an error with the app. If you see a blank screen, please use your back key and try submitting the photo again.</p>
 							<form enctype="multipart/form-data" method="post" action="php/upload.php">
 						    	<fieldset>
+
+						    		<!-- category of clothing -->
 						        <legend><h2>What category does your article of clothing fall under?</h2></legend><br>
 						        <select name="clothesType">
 						            <option> Select Option </option> <!-- Q: how do i make this an error if you use this so submit - or run error message -->
@@ -61,10 +63,28 @@
 						            <option value="undergarments"> Undergarments </option>
 						            <br><option value="shoes"> Shoes </option>
 						        </select><br><br>
+
+<!-- seasonal -->
+						        <legend><h2>What season do you normally wear this article of clothing?</h2></legend><br>
+						        <select>
+						            <option> Select Option </option> <!-- Q: how do i make this an error if you use this so submit - or run error message -->
+						            <option> Spring </option>
+						            <option> Summer </option>
+						            <option> Fall </option>
+						            <option> Winter </option>
+						        </select><br><br>
+
+<!-- type of clothing weight -->
+						        <legend><h2>How would you describe the weight of this article?</h2></legend><br>
+						        <select>
+						            <option> Select Option </option> <!-- Q: how do i make this an error if you use this so submit - or run error message -->
+						            <option> Lightweight </option>
+						            <option> Heavyweight </option>
+						        </select><br><br>
 						     
 						    	</fieldset>
-                		<input type="file" size="32" name="image_field" value="">
-					  				<input type="submit" name="Submit" value="Upload">
+                		<input type="file" size="32" name="image_field" value="" style="margin-bottom: 20px;">
+					  				<input type="submit" name="Submit" value="Upload" style="float:center;">
 							</form>
 
 							<!-- look into camera API? -->
