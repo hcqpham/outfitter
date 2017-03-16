@@ -15,12 +15,10 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="inner">
+						<div class="inner" id="gradgrn">
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"></span><span class="title">Wardrobe - Welcome to your virtual closet!</span>
-								</a>
+							<!-- Header -->
+									<h2 style="color:white;">Your Virtual Wardrobe</h2>
 
 							<!-- Nav -->
 								<nav>
@@ -47,20 +45,40 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">							<p> Welcome to your personalized wardrobe! Take a look at your digital wardrobe and filter through your tops, shirts, dresses, undergarments, and shoes. </p>
-
-							<!-- filter-->
+							<!-- filter test 2 w/ js -->
 							<div class="dropdown" style="float:right; margin-right:2em;">
-							  <button class="dropbtn">Filter</button>
-							  <div class="dropdown-content">
+							  <button onclick="filterBtn()" class="dropbtn">Filter</button>
+							  <div id="myDropdown" class="dropdown-content">
 							    <a href="#">Tops</a>
 							    <a href="#">Outerwear</a>
+							    <a href="#">Pants</a>
 							    <a href="#">Dresses</a>
+							    <a href="#">Undergarments</a>
+							    <a href="#">Shoes</a>
 							  </div>
 							</div>
 
-							<br><br><br>
-	
-							<!-- wardrobe -->
+							<br><br>
+							<div id="topsDiv">
+								<h2>Tops</h2>
+							</div>
+							<div id="outerwearDiv">
+								<h2>Outerwear</h2>
+							</div>
+							<div id="pantsDiv">
+								<h2>Pants</h2>
+							</div>
+							<div id="dressesDiv">
+								<h2>Dresses</h2>
+							</div>
+							<div id="undergarmentsDiv">
+								<h2>Undergarments</h2>
+							</div>
+							<div id="shoesDiv">
+								<h2>Shoes</h2>
+							</div>
+<br><br>
+							<!-- images being rendered here -->
 								<div id="dvProdList"></div>
 								<div class="clearfix"></div>
 						</div>
@@ -76,7 +94,10 @@
 			<script src="js/util.js"></script>
 			<script src="js/main.js"></script>
   			<script src="js/imageupload.js"></script>
-			<script src="js/wardrobelaundry.js"></script>  
+			<script src="js/wardrobelaundry.js"></script>
+			<script src="js/filterbtn.js"></script>  
+
+
 
 			<script>
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
