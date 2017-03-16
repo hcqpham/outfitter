@@ -13,11 +13,12 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="inner">
+						<div class="inner" id="grad">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"></span><span class="title">Plan your outfits ahead of time</span>
+								<a href="index.html">
+									<h2 style="color:white;">Plan Outfits
+									</h2>
 								</a>
 
 							<!-- Nav -->
@@ -48,10 +49,9 @@
 						<div class="inner">
 							<!-- weather api -->
 							<div class="weather">
-								<h3>  Weather Checker </h3>
-								<p> Want to check the weather before planning your outfit for the week? Type in your city below to view some more information about the weather! </p>
+								<p> Check the weather for your destination before planning your outfit for the week. Type in your city below and press enter to view more information.  </p>
 								<form role="search" action="javascript:getWeather()">
-							        <div class="form-group"><input id="city" type="text" class="form-control" placeholder="Enter City and then press Enter" required></div>
+							        <div class="form-group"><input style="background-color: #BAE0FF;" id="city" type="text" class="form-control" placeholder="Enter name of city or zip code then press Enter" required></div>
 							        <!--<button type="submit" class="btn btn-default">Get Weather Forecast for next Five Days</button>-->
 							        <button type="button" id="showbtn"> Show Forecast </button>
 							        <button type="button" id="hidebtn"> Hide Forecast </button>
@@ -62,9 +62,8 @@
 								    <div id="forecast" class="row"></div>
 								</div>
 								</div>
-
-								<legend><h2>What type of occasion is this outfit for? </h2></legend><br>
-
+<!-- type of occasion -->
+<h2>What occasion is this outfit for? </h2>
 						        <select>
 						            <option> Select Option </option> <!-- Q: how do i make this an error if you use this so submit - or run error message -->
 						            <option> Casual </option>
@@ -72,6 +71,66 @@
 						            <option> Work </option>
 						            <option> Nightlife </option>
 						        </select><br><br>
+
+						        <!-- type of day? -->
+						        <h2>When do you want to wear this item? </h2>
+						        	<!-- calendar -->
+
+<div class="month"> 
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li style="text-align:center;">
+      March<br>
+      <span style="font-size:18px">2017</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days"> 
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+   <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+   <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+</ul>
+
+
 
 							<!-- this is what renders my images from the json array -->
 							<div id="dvProdList"></div>
