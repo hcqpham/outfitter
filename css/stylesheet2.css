@@ -51,7 +51,7 @@ div.desc {
 
 @media only screen and (max-width: 500px){
     .responsive {
-        width: 50%;
+        width: 30%;
         height: 150px;
     }
 
@@ -71,6 +71,7 @@ div.desc {
 }
 
 
+/* gradient for pickoutfit header */
 #grad
 {
     background-color: #62C2FF;
@@ -81,9 +82,8 @@ background: -moz-linear-gradient(right, #62C2FF, #4B76FF);
 background: linear-gradient(to right, #62C2FF, #4B76FF);
 }
 
-<!-- Calendar -->
+/* css for calendar on pickoutfit */
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
 
 /* Month header */
 .month {
@@ -121,6 +121,7 @@ body {font-family: Verdana, sans-serif;}
     margin: 0;
     padding: 10px 0;
     background-color:#ddd;
+    font-size:0.8em;
 }
 
 .weekdays li {
@@ -134,13 +135,12 @@ body {font-family: Verdana, sans-serif;}
 .days {
     padding: 10px 0;
     background: #eee;
-    margin: 0;
 }
 
 .days li {
     list-style-type: none;
     display: inline-block;
-    width: 13.6%;
+    width: 15.7%;
     text-align: center;
     margin-bottom: 5px;
     font-size:12px;
@@ -152,4 +152,84 @@ body {font-family: Verdana, sans-serif;}
     padding: 5px;
     background: #1abc9c;
     color: white !important
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* dropdown menu for filtering clothes in responsive mode */
+.dropbtn {
+    background-color: #BA0000;
+    color: white !important;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #B00000;
+}
+
 }
