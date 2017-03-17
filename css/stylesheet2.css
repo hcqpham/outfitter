@@ -27,6 +27,7 @@
 
 #topsDiv h2{
     background-color: #69DBBD;
+    color: white !important;
 }
 
 #outerwearDiv{
@@ -35,6 +36,7 @@
 
 #outerwearDiv h2{
  background-color: #69DBBD;
+ color: white !important;
 }
 
 #pantsDiv{
@@ -44,6 +46,7 @@
 
 #pantsDiv h2{
     background-color: #69DBBD;
+    color: white !important;
 }
 
 #dressesDiv{
@@ -53,6 +56,7 @@
 
 #dressesDiv h2{
     background-color: #69DBBD;
+    color: white !important;
 }
 
 #undergarmentsDiv{
@@ -62,6 +66,7 @@
 
 #undergarmentsDiv h2{
     background-color: #69DBBD;
+    color: white !important;
 }
 
 #shoesDiv{
@@ -70,6 +75,7 @@
 
 #shoesDiv h2{
     background-color: #69DBBD;
+    color: white !important;
 }
 
 div.img {
