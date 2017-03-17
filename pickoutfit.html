@@ -62,13 +62,26 @@
 								    <div id="forecast" class="row"></div>
 								</div>
 								</div>
-
+						
 							<!-- this is what renders my images from the json array -->
 							<div id="dvProdList"></div>
 							<div class="clearfix"></div>
 							<br>
 
- 							<!-- type of day? -->
+ 						
+
+							<!-- Pick Outfit modal function -->
+							<center><button id="myBtn">Pick Outfit</button></center>
+
+							<!-- The Modal -->
+							<div id="myModal" class="modal">
+
+							  <!-- Modal content -->
+							  <div class="modal-content">
+							    <span class="close">&times;</span>
+							    <p> <b> Outfit saved! </b> Before you go.. additional settings </p>
+
+							    <!-- type of day? -->
 						        <h2>When do you want to wear this item? </h2>
 						        
 						        <!-- calendar -->
@@ -135,17 +148,10 @@
 						            <option> Work </option>
 						            <option> Nightlife </option>
 						        </select><br><br>
-
-							<!-- Pick Outfit modal function -->
-							<center><button id="myBtn">Pick Outfit</button></center>
-
-							<!-- The Modal -->
-							<div id="myModal" class="modal">
-
-							  <!-- Modal content -->
-							  <div class="modal-content">
-							    <span class="close">&times;</span>
-							    <p><b>Success!</b><br> Do you want to <a href='pickoutfit.html'>pick another outfit?</a><br><br>Or see <a href='outfit.html'>Outfits</a></p>
+							    <div class="pickoutfitbtn">
+								<center><p id="successbtn">
+								<button onclick="successDialogue()" type="button" class="btn" style="font-size: 0.5em;">Confirm Selection</button></p></center>
+								</div>
 							  </div>
 							</div>
 							
@@ -164,7 +170,9 @@
 			<script src="js/modal.js"></script> 
 			<script src="js/imageupload.js"></script>
 			<script src="js/weather.js"></script>     
-			<script src="js/pickoutfit.js"></script> 
+			<script src="js/pickoutfit.js"></script>
+			<script src="js/filterbtn.js"></script>  
+ 
 
 <!-- script for weather. 3/2 for some reason my checkbox won't load at the same time as my weather api if this isn't commented out so i'm going to keep this here and not know what it really does becauase i like that it works -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

@@ -6,6 +6,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/stylesheet2.css" />
+
 	</head>
 	<body>
 		<!-- Wrapper -->
@@ -13,11 +15,10 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="inner">
+						<div class="inner" id="gradpink">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"></span><span class="title">Uploader</span>
+								<h2>Uploader</h2>
 								</a>
 
 							<!-- Nav -->
@@ -47,7 +48,7 @@
 						<div class="inner">
 							<div id="uploadimg">
 							<center>
-							<h2>Upload your photos of your clothes to your wardrobe here!</h2> <br>
+							<h2>Upload your photos of your clothes to your wardrobe here!</h2>
 							<p>Please note that files over 5MB will not be accepted and will cause an error with the app. If you see a blank screen, please use your back key and try submitting the photo again.</p>
 							<form enctype="multipart/form-data" method="post" action="php/upload.php">
 						    	<fieldset>
@@ -72,14 +73,6 @@
 						            <option> Summer </option>
 						            <option> Fall </option>
 						            <option> Winter </option>
-						        </select><br><br>
-
-<!-- type of clothing weight -->
-						        <legend><h2>How would you describe the weight of this article?</h2></legend><br>
-						        <select>
-						            <option> Select Option </option> <!-- Q: how do i make this an error if you use this so submit - or run error message -->
-						            <option> Lightweight </option>
-						            <option> Heavyweight </option>
 						        </select><br><br>
 						     
 						    	</fieldset>

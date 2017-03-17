@@ -18,10 +18,11 @@
 }
 
 .clothesContainer{
-    
+
 }
 
 #topsDiv{
+    margin-bottom: 25em;
 }
 
 #topsDiv h2{
@@ -29,7 +30,7 @@
 }
 
 #outerwearDiv{
-
+    margin-bottom: 25em;
 }
 
 #outerwearDiv h2{
@@ -37,6 +38,7 @@
 }
 
 #pantsDiv{
+    margin-bottom: 15em;
 
 }
 
@@ -45,6 +47,7 @@
 }
 
 #dressesDiv{
+    margin-bottom: 15em;
 
 }
 
@@ -53,6 +56,7 @@
 }
 
 #undergarmentsDiv{
+    margin-bottom: 15em;
 
 }
 
@@ -164,6 +168,17 @@ background: -webkit-linear-gradient(left, #8C4799, #614799);
 background: -o-linear-gradient(right, #8C4799, #614799);
 background: -moz-linear-gradient(right, #8C4799, #614799);
 background: linear-gradient(to right, #8C4799, #614799);
+}
+
+/* gradient for upload header */
+#gradpink
+{
+    background-color: #D19FD4;
+background: #D19FD4;
+background: -webkit-linear-gradient(left, #D19FD4, #D1BFD4);
+background: -o-linear-gradient(right, #D19FD4, #D1BFD4);
+background: -moz-linear-gradient(right, #D19FD4, #D1BFD4);
+background: linear-gradient(to right, #D19FD4, #D1BFD4);
 }
 
 /* css for calendar on pickoutfit */

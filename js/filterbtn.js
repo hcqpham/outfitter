@@ -16,3 +16,19 @@ window.onclick = function(event) {
     }
   }
 }
+
+
+$(document).ready(function(){
+  $(".clothingType").click(function(e){
+    e.preventDefault();
+    var clothesType = $(this).data('val');
+    //get all div elements within class clothes-container
+    $("div.clothes-container>div").each(function(){
+      var $this = $(this);
+      if(clothesType == '' || $this.attr('id') == clothesType + "Div")
+        $this.fadeIn();
+      else
+        $this.fadeOut();
+    });
+  });
+});

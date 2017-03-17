@@ -46,17 +46,18 @@
 					<div id="main">
 						<div class="inner">							<p> Welcome to your personalized wardrobe! Take a look at your digital wardrobe and filter through your tops, shirts, dresses, undergarments, and shoes. </p>
 							<!-- filter test 2 w/ js -->
-							<div class="dropdown" style="float:right; margin-right:2em;">
-							  <button onclick="filterBtn()" class="dropbtn">Filter</button>
-							  <div id="myDropdown" class="dropdown-content">
-							    <a href="#">Tops</a>
-							    <a href="#">Outerwear</a>
-							    <a href="#">Pants</a>
-							    <a href="#">Dresses</a>
-							    <a href="#">Undergarments</a>
-							    <a href="#">Shoes</a>
-							  </div>
-							</div>
+						<div class="dropdown" style="float:right; margin-right:2em;">
+						  <button onclick="filterBtn()" class="dropbtn">Filter</button>
+						  <div id="myDropdown" class="dropdown-content">
+						    <a class='clothingType' data-val='tops' href="#">Tops</a>
+						    <a class='clothingType' data-val='outerwear' href="#">Outerwear</a>
+						    <a class='clothingType' data-val='pants' href="#">Pants</a>
+						    <a class='clothingType' data-val='dresses' href="#">Dresses</a>
+						    <a class='clothingType' data-val='undergarments' href="#">Undergarments</a>
+						    <a class='clothingType' data-val='shoes' href="#">Shoes</a>
+						    <a class='clothingType' data-val='' href="#">See All </a>
+						  </div>
+						</div>
 
 							<br><br>
 							

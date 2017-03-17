@@ -8,7 +8,7 @@ $(document).ready(function ()
 		//$.each(json, function(key, value)
 		for (var i=0; i < json.length; i++)
 		{
-			$('#dvProdList').append('<div class="responsive">\<div class="img"><img src="'+json[i].imgURL+'"/>\</div></div>' );
+			$('#' + json[i].clothesType + 'Div').append('<div class="responsive">\<div class="img"><img src="'+json[i].imgURL+'"/>\</div></div>' );
 		};
 	});
 });
@@ -20,8 +20,9 @@ $('img').click(function ()
 	var imgURL = $(this).attr('src');
 });
 
+/* will this break anything? who knows.
 $(document).ready(function ()
 {
 	$('#dvProd').append('<div class="responsive">\<div class="img"><img src="'+ imgURL + '" />\</div></div>' );
 });
-
+*/
